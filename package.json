@@ -1,0 +1,32 @@
+{
+  "name": "react-auth-app-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surajverma2587/react-auth-app-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surajverma2587/react-auth-app-server/issues"
+  },
+  "homepage": "https://github.com/surajverma2587/react-auth-app-server#readme",
+  "dependencies": {
+    "apollo-server": "^3.6.3",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
