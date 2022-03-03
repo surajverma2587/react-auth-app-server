@@ -1,6 +1,8 @@
 const { model, Schema } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+const imageSchema = require("./Image");
+
 const userSchema = {
   firstName: {
     type: String,
@@ -26,6 +28,7 @@ const userSchema = {
     required: true,
     minLength: 8,
   },
+  images: [imageSchema],
 };
 
 const schema = new Schema(userSchema, {

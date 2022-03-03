@@ -1,8 +1,25 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
+  type Image {
+    id: ID!
+    title: String!
+    description: String!
+    imageUrl: String!
+  }
+
+  type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    images: [Image]
+  }
+
   type Auth {
     token: ID!
+    user: User!
   }
 
   input LoginInput {
@@ -18,13 +35,20 @@ const typeDefs = gql`
     password: String!
   }
 
+  input PostImageInput {
+    title: String!
+    description: String!
+    imageUrl: String!
+  }
+
   type Query {
-    users: [String]
+    dashboard: User!
   }
 
   type Mutation {
     login(input: LoginInput!): Auth!
     signup(input: SignupInput!): Auth!
+    postImage(input: PostImageInput!): User!
   }
 `;
 

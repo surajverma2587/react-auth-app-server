@@ -21,6 +21,13 @@ const login = async (_, { input }, context) => {
 
     return {
       token: signToken(user),
+      user: {
+        id: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        username: user.username,
+      },
     };
   } catch (error) {
     console.log(`[ERROR]: Failed to login | ${error.message}`);
