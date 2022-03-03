@@ -2,7 +2,17 @@ const { model, Schema } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const userSchema = {
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+    maxLength: 200,
+  },
+  lastName: {
+    type: String,
+    required: true,
+    maxLength: 200,
+  },
+  username: {
     type: String,
     required: true,
     maxLength: 200,
